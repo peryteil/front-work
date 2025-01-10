@@ -7,7 +7,7 @@ function check() {
   const confirmPassword = document.querySelector("#pwd2");
   const path = document.querySelector("#path");
   const memo = document.querySelector("#memo");
-  const mail_y = document.querySelector("#mail-y");
+  // const mail_y = document.querySelector("#mail-y");
   const mailling = document.getElementsByName("mailling");
 
   // 1. 아이디가 4자~10자 사이인지 확인
