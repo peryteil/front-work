@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/fruit.css">
+  <script src="./js/fruit.js" defer></script>
+  <script src="./js/fruit.js?v=1.0" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <form action="" method="get" onsubmit="checki()">
+    <h3>상품 선택</h3>
+    <div class="group">
+      <p>주문할 상품을 선택해 주세요.</p>
+      <div class="item">
+        <input type="checkbox" id="gift3kg" name="gift3kg" onchange="toggleInput('gift3kg')">
+        <label for="gift3kg">선물용 3kg</label>
+        <input type="text" id="gift3kgInput"  placeholder="수량 입력">
+      </div>
+      <div class="item">
+        <input type="checkbox" id="gift5kg" name="gift5kg" onchange="toggleInput('gift5kg')">
+        <label for="gift5kg">선물용 5kg</label>
+        <input type="text" id="gift5kgInput"  placeholder="수량 입력">
+      </div>
+      <div class="item">
+        <input type="checkbox" id="home3kg" name="home3kg" onchange="toggleInput('home3kg')">
+        <label for="home3kg">가정용 3kg</label>
+        <input type="text" id="home3kgInput"  placeholder="수량 입력">
+      </div>
+      <div class="item">
+        <input type="checkbox" id="home5kg" name="home5kg" onchange="toggleInput('home5kg')">
+        <label for="home5kg">가정용 5kg</label>
+        <input type="text" id="home5kgInput"  placeholder="수량 입력">
+      </div>
+    </div>
+
+    <div class="group">
+      <p>포장 선택</p>
+      <div class="item">
+        <input type="radio" name="packaging" value="giftWrap" id="giftWrap" onchange="logPackagingChoice()">
+        <label for="giftWrap">선물 포장</label>
+      </div>
+      <div class="item">
+        <input type="radio" name="packaging" value="noWrap" id="noWrap" onchange="logPackagingChoice()">
+        <label for="noWrap">포장 안 함</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3>배송 정보</h3>
+    <form id="shippingForm">
+      <div class="form-group">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">배송 주소</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required placeholder="예: 010-1234-5678">
+      </div>
+      <div class="form-group">
+        <label for="deliveryDate">배송 지정</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+        <span class="note">(주문일로부터 최소 3일 이후)</span>
+      </div>
+      <div class="form-group">
+        <label for="memo">메모</label>
+        <textarea id="memo" name="memo" rows="4" placeholder="요청 사항을 입력하세요."></textarea>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="order-btn">주문하기</button>
+        <button type="button" class="cancel-btn" onclick="cancelOrder()">취소하기</button>
+      </div>
+    </form>
+  </form>
+  </div>
+</body>
+</html>
