@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/shoes.css" />
     <title>Document</title>
   </head>
@@ -10,61 +17,116 @@
     <div class="nav-container">
       <div class="nav-item">ShoesShop</div>
       <div class="nav-item">Products</div>
-      <div style="flex-grow: 1"></div>
-      <!-- flex-grow : 마지막 문자를 맨 끝으로 보냄 -->
+      <div class="spacer"></div>
       <div class="nav-item">Services</div>
     </div>
     <div class="main-background">
       <h4 class="main-title">Buy Out Shoes!</h4>
       <p class="main-content">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi,
-        sapiente et asperiores veritatis, autem aliquid expedita minus
-        architecto, hic quia aut voluptate tempore voluptas rerum nam modi. Cum,
-        necessitatibus deleniti!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
+        explicabo dolores iure consequuntur eligendi nam inventore aliquid
+        labore a dolore totam illo id odio, tenetur aspernatur dolorem autem
+        dolorum ut.
       </p>
       <p class="main-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aliquam
-        reprehenderit nisi aperiam sapiente placeat, iure in rerum accusamus
-        eius. Architecto sequi pariatur in eius debitis eaque nesciunt,
-        asperiores deserunt.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
+        explicabo dolores iure consequuntur eligendi nam inventore aliquid
+        labore a dolore totam illo id odio, tenetur aspernatur dolorem autem
+        dolorum ut.
       </p>
       <button class="main-button">구매하기</button>
     </div>
     <div class="explain-box">
       <h4>How we design out shoes.</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aliquam
-        reprehenderit nisi aperiam sapiente placeat, iure in rerum accusamus
-        eius. Architecto sequi pariatur in eius debitis eaque nesciunt,
-        asperiores deserunt.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
+        explicabo dolores iure consequuntur eligendi nam inventore aliquid
+        labore a dolore totam illo id odio, tenetur aspernatur dolorem autem
+        dolorum ut.
       </p>
     </div>
+
     <!-- 미디어 쿼리를 활용한 가로정렬 연습 -->
     <div class="product-container">
       <div>
-        <h4>Fast Shopping</h4>
+        <h4>Fast Shipping</h4>
         <p>lorem ipsum</p>
       </div>
       <div>
-        <h4>Fast Shopping</h4>
+        <h4>Fast Shipping</h4>
         <p>lorem ipsum</p>
       </div>
       <div>
-        <h4>Fast Shopping</h4>
+        <h4>Fast Shipping</h4>
         <p>lorem ipsum</p>
       </div>
       <div>
-        <h4>Fast Shopping</h4>
+        <h4>Fast Shipping</h4>
         <p>lorem ipsum</p>
       </div>
-      <div style="float: none; clear: both;"></div>
     </div>
+
+    <!-- FontAwesome 을 활용한 이미지 처리 -->
+    <div class="product-container">
+      <div>
+        <i class="fa-solid fa-cart-shopping fa-3x"></i>
+        <h4>Fast Shipping</h4>
+        <p>We Ship faster than other shops.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-earth-asia fa-3x"></i>
+        <h4>Good Service</h4>
+        <p>Expect a life long Service</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-user fa-3x"></i>
+        <h4>Free Coupons</h4>
+        <p>With new welcome gifts</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-shirt fa-3x"></i>
+        <h4>New Products</h4>
+        <p>See monthly new products</p>
+      </div>
+    </div>
+
+    <!-- 상품이미지 진열하기 -->
+    <div class="shop-bg">
+      <div class="shop-container">
+        <div class="shop-item">
+          <div>
+            <div class="image-container">
+              <div class="over-lay">
+                <img src="./img/product1.jpg" alt="신발" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item">
+          <div class="image-container">
+            <div class="over-lay"></div>
+            <div>
+              <img src="./img/product2.jpg" alt="신발" />
+            </div>
+          </div>
+        </div>
+        <div class="shop-item">
+          <div class="image-container">
+            <div class="over-lay"></div>
+            <div>
+              <img src="./img/product3.jpg" alt="신발" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="form-background">
       <div class="form-white">
         <form action="" method="">
           <div class="w-100">
             <h3>Contact Us</h3>
-            <p>Yout Email</p>
+            <p>Your Email</p>
             <input
               type="email"
               class="form-input"
@@ -80,38 +142,18 @@
             <p>Last Name</p>
             <input type="text" class="form-input" name="last-name" />
           </div>
-          <div style="clear: both"></div>
+          <div class="clear"></div>
           <div class="w-100">
             <p>Message</p>
             <textarea name="message" id="" class="form-input"></textarea>
           </div>
           <div class="w-100">
-            <input type="checkbox" name="" id="sub" class="" />
+            <input type="checkbox" name="sub" id="sub" class="" />
             <label for="sub">Subscribe</label>
-            <!-- <buttoin class="btn yellow-button">SEND</buttoin> -->
             <input type="submit" />
           </div>
         </form>
       </div>
     </div>
-
-    <!-- 폼 작업
-    <form action="" method="get">
-      
-      action : 전송할 주소 
-      method : 전송방법(Get, Post) 
-      form action="비워 두면
-      get 요청"" get 전부 다보여줌 post 안보여줌 -->
-    <!-- <input type="text">
-    <input type="password">
-    <input type="date">
-    <input type="email">
-    <input type="number" name="" id="">
-    <input type="checkbox" name="" id="">
-    <input type="radio">
-    <input type="button" value="눌러주세요">
-    <textarea name="" id=""></textarea>
-    <input type="submit" value="전송">
-    </form> -->
   </body>
 </html>
