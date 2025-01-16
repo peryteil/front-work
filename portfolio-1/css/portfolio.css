@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #4facfe, #a18cd1);
+  color: white;
+  padding: 20px;
+}
+
+.header-content {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  margin-bottom: 20px;
+}
+
+.header-image {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.header-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: bac 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* About 섹션 */
+.about {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 20px;
+}
+
+/* Services 섹션 */
+.services {
+  background: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.service-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-item {
+  text-align: center;
+  max-width: 200px;
+}
+
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto 10px;
+}
+
+/* Portfolio 섹션 */
+.portfolio {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.image-container {
+  position: relative;
+}
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .text-overlay {
+  opacity: 1;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: blue;
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.3s ease, color 0.3s ease;
+}
+
+.icon-circle:hover {
+  background: #007bff;
+  color: white;
+}
+@media (min-width: 768px) {
+  .header-content {
+    flex: 1 1 50%; /* 화면이 넓으면 50%로 정렬 */
+    text-align: left;
+  }
+
+  .header-image {
+    flex: 1 1 50%;
+  }
+}
